@@ -1,0 +1,12 @@
+version: '3'
+services:
+  recursive-inherit-bundle-cli:
+    container_name: recursive-inherit-test-cli
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      XDEBUG_MODE: 'coverage'
+    restart: 'no'
+    volumes:
+      - .:/var/www/html
